@@ -1,0 +1,98 @@
+nav{
+    display: flex;
+    background-color: #333;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    box-shadow: 5px 8px 10px #888888;
+}
+.logo{
+    font-size: 24px;
+    transition: color .8s
+}
+
+.logo:hover{
+    color: #FFC20F;
+
+}
+ul{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+li{
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: background-color .8s;
+}
+
+li:hover{
+    background-color:#006747;
+    color: #FFC20F;
+    border-radius: 5px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 600px){
+    nav{
+        display: flex;
+        flex-direction: column;
+    }
+
+    ul{
+        flex-direction: column;
+        padding-right: 100px;
+        
+    }
+
+    li{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .logo{
+        padding-bottom: 15px;
+    }
+
+}
+
+h1{
+    font-size: 36px;
+}
+
+img{
+    width: 400px;
+}
+
+.welcome{
+    padding-top: 20px;
+    display: flex;
+    justify-content: end;
+
+
+}
+
+.profile_face img{
+    width: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    border-style: solid;
+}
+
+.profile_face{
+    
+    transition: transform 0.5s;
+    transition-timing-function: linear;
+}
+
+.profile_face:hover{
+    transform: scale(1.1);
+}
+
