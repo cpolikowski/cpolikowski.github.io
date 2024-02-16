@@ -103,3 +103,11 @@ img{
     transform: scale(1.1);
 }
 
+.images{
+    display: flexbox;
+}
+
+.images img{
+    justify-content: space-between;
+}
+
