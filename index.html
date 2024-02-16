@@ -3,76 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>navBar</title>
-    <style>
-        nav{
-            display: flex;
-            background-color: #333;
-            align-items: center;
-            justify-content: space-between;
-            padding-left: 20px;
-            padding-right: 20px;
-            color: white
-        }
-        .logo{
-            font-size: 24px;
-        }
-        ul{
-            display: flex;
-            justify-content: space-between;
-            list-style-type: none;
-        }
-        li{
-            padding-left: 10px;
-            padding-right: 10px;
-            transition: background-color .8s;
-        }
-
-        li:hover{
-            background-color:rgb(50, 42, 165);
-            border-radius: 5px;
-        }
-
-        a{
-            color: white;
-            text-decoration: none;
-        }
-
-        @media (max-width: 600px){
-            nav{
-                display: flex;
-                flex-direction: column;
-            }
-
-            ul{
-                flex-direction: column;
-                padding-right: 100px;
-                
-            }
-
-            li{
-                padding-top: 5px;
-                padding-bottom: 5px;
-            }
-
-            .logo{
-                padding-bottom: 15px;
-            }
-        }
-    </style>
+    <title>Home</title>
+    <link rel = "stylesheet" href = "style.css">
 </head>
 <body>
     <header>
         <nav>
-            <div class = "logo">Logo</div>
+            <div class = "logo">Home</div>
 
             <ul>
-                <li><a href = "home.html">Home</a></li>
+                <li><a href = "index.html">Home</a></li>
                 <li><a href = "about.html">About</a></li>
                 <li><a href = "services.html">Services</a></li>
                 <li><a href = "contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
+
+    <section>
+        <div class = "welcome">
+            <h1>Welcome</h1>
+            <div class = "profile_face">
+                <img src = "/img/IMG_0564.jpg">
+            </div>
+        </div>
+
+            <h3>This is the website dedicated to Cam Polikowski. Here you will find any necessary information as well as things going on in my life.</h3>
+            <p>
+                I am currently an undergraduate student studying Computer Science and minoring in Mathematics at <a href = "https://www.siena.edu/" style = "color:#006747">Siena College</a>. 
+                Much of my programming experience is in Java and Python. This is my first experience experimenting with HTML and CSS and I am enjoying it so far! 
+                 In my free time, I enjoy traveling and doing things with friends. Explore my page to see pictures I have taken over time.
+            </p>
+        
+
+        <div>
+            <img src = "/img/IMG_1237.jpg" alt = "Duomo in Assisi">
+        </div>
+    </section>
+    
 </body>
 </html>
