@@ -11,7 +11,14 @@ nav{
 }
 .logo{
     font-size: 24px;
-    transition: color .8s
+    transition: color .8s;
+    animation: glowing 3s infinite;
+}
+
+@keyframes glowing{
+    0%{color: white}
+    50%{color: #FFC20F}
+    100%{color: white}
 }
 
 .logo:hover{
@@ -74,8 +81,7 @@ img{
 .welcome{
     padding-top: 20px;
     display: flex;
-    justify-content: end;
-
+    justify-content: space-between;
 
 }
 
@@ -84,10 +90,11 @@ img{
     border-radius: 50%;
     overflow: hidden;
     border-style: solid;
+    margin-right: 25px;
+    margin-bottom: 5px;
 }
 
 .profile_face{
-    
     transition: transform 0.5s;
     transition-timing-function: linear;
 }
