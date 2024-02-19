@@ -55,7 +55,8 @@ a{
 
     ul{
         flex-direction: column;
-        padding-right: 100px;
+        padding-right: 500px;
+        margin: auto;
         
     }
 
