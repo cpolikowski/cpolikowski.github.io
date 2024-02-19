@@ -108,6 +108,7 @@ img{
 }
 
 .images img{
+    align-items: center;
     justify-content: space-between;
 }
 
