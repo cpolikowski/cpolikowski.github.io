@@ -104,11 +104,13 @@ img{
 }
 
 .images{
-    display: flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .images img{
-    align-items: center;
-    justify-content: space-between;
+    padding-left: 2px;
+    padding-right: 2px;
 }
 
