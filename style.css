@@ -15,6 +15,10 @@ nav{
     animation: glowing 3s infinite;
 }
 
+.active{
+    font-style: italic;
+}
+
 @keyframes glowing{
     0%{color: white}
     50%{color: #FFC20F}
@@ -25,18 +29,18 @@ nav{
     color: #FFC20F;
 
 }
-ul{
+.navUl{
     display: flex;
     justify-content: space-between;
     list-style-type: none;
 }
-li{
+.navUl li{
     padding-left: 10px;
     padding-right: 10px;
     transition: background-color .8s;
 }
 
-li:hover{
+.navUl li:hover{
     background-color:#006747;
     color: #FFC20F;
     border-radius: 5px;
@@ -47,7 +51,7 @@ a{
     text-decoration: none;
 }
 
-@media (max-width: 600px){
+@media (max-width: 400px){
     nav{
         display: flex;
         flex-direction: column;
@@ -115,3 +119,47 @@ img{
     padding-right: 2px;
 }
 
+.holyGrail-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.holyGrail-header, .holyGrail-footer {
+    background-color: #FFC20F;
+    color: #fff;
+    padding: 10px;
+}
+
+.holyGrail-main {
+    flex: 1;
+    display: flex;
+    background-color: lightgray;
+    
+}
+
+.holyGrail-sidebar {
+    width: 200px;
+    background-color: #006747;
+    padding: 10px;
+}
+
+.holyGrail-content {
+    flex: 1;
+    padding: 10px;
+}
+
+.holyGrail-footer {
+    margin-top: auto;
+}
+
+@media (max-width: 768px) {
+    .holyGrail-main {
+        flex-direction: column;
+    }
+    
+    .holyGrail-sidebar {
+        width: 100%;
+        padding: 0;
+    }
+}
