@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Quest for the Crystal of Wisdom</title>
+    <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+    <section class="container">
+        <h1>The Journey Continues</h1>
+<p>With the guardian's riddle behind you, the path forward splits into three. Each route is known to favor certain traits: strength, wisdom, or stealth. Choose your path wisely, as it will influence the challenges you face ahead.</p>
+<form id = "pathForm" type = "get" action = "page6.html">
+    <label for = "path">Choose your path:</label>
+    <select id = "pathChoice" name = "pathChoice" onChange = "select()">
+        <option value = "">--Please choose an option--</option>
+        <option value = "easy">Path of Least Resistence</option>
+        <option value = "medium">Path of Some Trouble</option>
+        <option value = "stealth">Path of Stealth</option>
+    </select>
+    <input type = "submit" id = "button" value = "Continue on Your Journey" disabled>
+</form>
+<p>Your choice will not only test your abilities but also reveal deeper truths about your character.</p>
+    </section>
+</body>
+
+<script>
+    function select(){
+        var sel = document.getElementById("pathChoice").value;
+        const btn = document.getElementById("button");
+
+        if (sel == "stealth"){
+            btn.disabled = false;
+            document.getElementById("pathForm").action = "page5b.html";
+        }else if (sel !== ""){
+            btn.disabled = false;
+        }
+    }
+</script>
+</html>

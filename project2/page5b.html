@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Quest for the Crystal of Wisdom</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="container">
+
+        <h1>The Path of Stealth</h1>
+        <p>To successfully navigate the Path of Stealth, you must choose your actions carefully. Select the correct
+            sequence of actions to avoid detection and reach your objective.</p>
+        <!-- Actions -->
+        <div onclick="selectAction('hide')" class="stealth-option" id = "hide">Hide in the shadows</div>
+        <div onclick="selectAction('run')" class="stealth-option" id = "run">Run quickly to the next cover</div>
+        <div onclick="selectAction('distract')" class="stealth-option" id = "distract">Create a distraction</div>
+        <div onclick="selectAction('wait')" class="stealth-option" id = "wait">Wait for the right moment</div>
+        <!-- Buttons -->
+        <button onclick="checkSequence()">Check Sequence</button>
+        <button onclick="reset()">Reset!</button>
+        <script>
+            const correctSequence = ['hide', 'wait', 'distract'];
+            // Your Code here
+            let inputArray = [];
+            function selectAction(input){
+                inputArray.push(input);
+                document.getElementById(input).style.backgroundColor = "#FFC72C"; // Siena Yellow
+            }
+
+            function checkSequence(){
+                // check the length
+                if (inputArray.length !== correctSequence.length){
+                    // should fail due to lengths being off.
+                    alert("Incorrect sequence");
+                } else if (inputArray[0] === correctSequence[0] &&
+                inputArray[1] === correctSequence[1] && 
+                inputArray[2] === correctSequence[2]){
+                    // this means it works
+                    alert("Congratulations on your achievment");
+                    window.location.href = "page6.html";
+                }else{
+                    // when it is of length 3 but the sequence is wrong.
+                    alert("Incorrect sequence");
+                }
+            }
+
+            function reset(){
+                // empty out the input array
+                inputArray = [];
+                
+                // reset the color of the buttons 
+                const opt = document.getElementsByClassName("stealth-option");
+                for(let i of opt){
+                    i.style.backgroundColor("");
+                }
+            }
+        </script>
+    </section>
+</body>
+
+</html>

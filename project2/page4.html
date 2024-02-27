@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The First Obstacle</title>
+    <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+    <section class="container">
+        <h1>The First Obstacle</h1>
+        <p>As you venture deeper into the Dark Forest, you encounter a mystical guardian. 
+            The guardian blocks your path and poses a riddle:
+        </p>
+        <q>I speak without a mouth and hear without ears. 
+            I have no body, but I come alive with wind. What am I?</q>
+
+        <form id = "riddleForm" type = "get" action = "page5.html">
+            <label for = "answer" >Your Answer:</label>
+            <input type = "text" id = "answer" name = "answer">
+            <input id = "submitButton" type = "submit" value = "Submit Answer" style = "background-color: red; color: white;">
+
+            <br>
+            <p>Think carefully, for the correct answer will allow you passage.</p>
+        </form>
+
+
+    </section>
+    <script>
+        const answerInput = document.getElementById("answer");
+        const btn = document.getElementById("submitButton");
+
+        function checkAns(correctAnswer, Input){
+            if(correctAnswer.toLowerCase() === Input.value.toLowerCase()){
+                btn.style.backgroundColor = "green";
+                btn.style.color = "white";
+            }else{
+                btn.style.backgroundColor = "red";
+                btn.style.color = "white";
+            }
+        }
+
+        answerInput.addEventListener("input", ()=>{
+            const ans = "echo";
+            checkAns(ans, answerInput);
+        });
+
+
+    </script>
+</body>
+</html>
