@@ -110,8 +110,10 @@ img{
 
 .images{
     display: flex;
-    justify-content: center;
+    justify-content: space-around; /* Adjust spacing between images */
     align-items: center;
+    max-width: 100%; /* Ensures images don't exceed screen width */
+    overflow: hidden; /* Hides overflowed content */
 }
 
 .images img{
