@@ -117,6 +117,8 @@ img{
 .images img{
     padding-left: 2px;
     padding-right: 2px;
+    max-width: calc(100% / 3);
+    max-height: auto;
 }
 
 .holyGrail-container {
