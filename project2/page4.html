@@ -15,7 +15,7 @@
         <q>I speak without a mouth and hear without ears. 
             I have no body, but I come alive with wind. What am I?</q>
 
-        <form id = "riddleForm" action = "page5.html">
+        <form id = "riddleForm" action = "">
             <label for = "answer" >Your Answer:</label>
             <input type = "text" id = "answer" name = "answer">
             <input id = "submitButton" type = "submit" value = "Submit Answer" style = "background-color: red; color: white;">
@@ -34,9 +34,11 @@
             if(correctAnswer.toLowerCase() === Input.value.toLowerCase()){
                 btn.style.backgroundColor = "green";
                 btn.style.color = "white";
+                riddleForm.action = "page5.html";
             }else{
                 btn.style.backgroundColor = "red";
                 btn.style.color = "white";
+                
             }
         }
 
